@@ -34,7 +34,7 @@ type LetStatement struct {
 	Value Expression
 }
 
-func (ls *LetStatement) statementNode()
+func (ls *LetStatement) statementNode() {}
 
 func (ls *LetStatement) TokenLiteral() string {
 	return ls.Token.Literal
@@ -45,8 +45,9 @@ type Identifier struct {
 	Value string // why need this?
 }
 
-func (i *Identifier) expressionNode()
+func (i *Identifier) expressionNode() {}
 
+// identifier 也是一个 node，所有的表述都应该是一个 node
 func (i *Identifier) TokenLiteral() string {
 	return i.Token.Literal
 }
